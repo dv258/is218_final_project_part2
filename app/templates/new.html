@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/trees/new" method="post">
+    <div class="row">
+        <div class="col">
+            <label for="girth_in">Girth (in):</label>
+            <input id="girth_in" type="number" step=0.1 class="form-control" placeholder="Girth (inches)" name="girth_in" required>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="height_ft">Height (ft):</label>
+            <input id="height_ft" type="number" class="form-control" placeholder="Height (feet)" name="height_ft" required>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="volume_ft_3">Volume (ft^3):</label>
+            <input id="volume_ft_3" type="number" step=0.1 class="form-control" placeholder="Volume (f^3)" name="volume_ft_3" required>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">Create</button>
+</form>
+{% endblock %}

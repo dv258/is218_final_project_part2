@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="card" class="m-5 p-2">
+    <h5 class="card-title">Tree ID: {{ tree.id }}</h5>
+
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><span>Girth: </span><span>{{ tree.girth_in }}</span><span> in</span></li>
+        <li class="list-group-item"><span>Height: </span><span>{{ tree.height_ft }}</span><span> ft</span></li>
+        <li class="list-group-item"><span>Volume: </span><span>{{ tree.volume_ft_3 }}</span><span> ft^3</span></li>
+    </ul>
+    <div class="card-body">
+        <a href="/edit/{{tree.id}}" class="card-link btn btn-primary">Edit</a>
+    </div>
+</div>
+<form action="/delete/{{tree.id}}" method="post"><button type="submit" class="btn btn-danger">Delete</button></form>
+
+
+{% endblock %}
+
